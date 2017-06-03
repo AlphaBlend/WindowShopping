@@ -1,0 +1,13 @@
+# Git stuff
+.gitk
+*.orig
+
+# Netbeans stuff
+build/
+dist/
+localonly/
+nbproject/
+
+# Netbeans stuff
+manifest.mf
+build.xml
