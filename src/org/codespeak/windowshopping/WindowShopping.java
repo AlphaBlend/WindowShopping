@@ -1,16 +1,21 @@
 package org.codespeak.windowshopping;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 /**
  *
  * @author AlphaBlend
  */
-public class WindowShopping {
+public class WindowShopping extends JavaPlugin {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    @Override
+    public void onEnable() {
+
+    }
+
+    @Override
+    public void onDisable() {
+
     }
 
 }
