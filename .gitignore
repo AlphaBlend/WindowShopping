@@ -11,3 +11,7 @@ nbproject/
 # Netbeans stuff
 manifest.mf
 build.xml
+
+# Other
+
+extra/
