@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
- * @author AlphaBlend
+ * @author Vector
  */
 public class WindowShopping extends JavaPlugin {
 

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * A class that lists the contents of a shop
  *
- * @author AlphaBlend
+ * @author Vector
  */
 public class ShopContents {
 

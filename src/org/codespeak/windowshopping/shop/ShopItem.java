@@ -5,7 +5,7 @@ import org.bukkit.Material;
 /**
  * A class that contains a single shop item listing
  *
- * @author AlphaBlend
+ * @author Vector
  */
 public class ShopItem {
 

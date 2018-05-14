@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * A class that tracks shop items in a page
  *
- * @author AlphaBlend
+ * @author Vector
  */
 public class ShopPage {
 
