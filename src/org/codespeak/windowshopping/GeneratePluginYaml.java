@@ -19,8 +19,8 @@ public class GeneratePluginYaml {
             pr = new PrintWriter(pluginFile);
             pr.println("name: " + Configuration.PLUGIN_NAME);
             pr.println("version: " + Configuration.PLUGIN_VERSION);
-            pr.println("main: org.codespeak.windowshopping.WindowShopping");
             pr.println("author: " + Configuration.PLUGIN_AUTHOR);
+            pr.println("main: org.codespeak.windowshopping.WindowShopping");
             pr.println("api-version: 1.13");
             pr.flush();
 

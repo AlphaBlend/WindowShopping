@@ -1,5 +1,5 @@
 name: WindowShopping
 version: 0.0.0
-main: org.codespeak.windowshopping.WindowShopping
 author: Vector
+main: org.codespeak.windowshopping.WindowShopping
 api-version: 1.13
