@@ -2,6 +2,7 @@ package org.codespeak.windowshopping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.event.Listener;
@@ -20,6 +21,7 @@ public class WindowShopping extends JavaPlugin {
     private List<Listener> listeners;
     private Logger logger;
     private Economy economy;
+    private boolean shopEnabled;
 
     @Override
     public void onEnable() {
@@ -35,11 +37,27 @@ public class WindowShopping extends JavaPlugin {
 
         RegisteredServiceProvider<Economy> econProvider = super.getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         economy = econProvider.getProvider();
+
+        if (economy != null) {
+            shopEnabled = true;
+        } else {
+            shopEnabled = false;
+            logger.log(Level.SEVERE, "Economy system not found! Shop has been disabled!");
+        }
     }
 
     @Override
     public void onDisable() {
 
+    }
+
+    /**
+     * Checks if the shop is enabled
+     *
+     * @return If shop is enabled
+     */
+    public boolean isShopEnabled() {
+        return shopEnabled;
     }
 
 }
