@@ -1,6 +1,5 @@
 package org.codespeak.windowshopping.shop;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

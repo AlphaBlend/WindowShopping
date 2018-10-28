@@ -8,7 +8,6 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
-import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.codespeak.windowshopping.listeners.BukkitInventoryListener;
 
