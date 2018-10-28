@@ -26,8 +26,7 @@ public class ShopPage {
     }
 
     /**
-     * Sets an item in the specified index with
-     * a shop item
+     * Sets an item in the specified index with a shop item
      *
      * @param idx index to set shop item
      * @param shopItem shop item to set

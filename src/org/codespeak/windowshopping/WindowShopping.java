@@ -52,6 +52,7 @@ public class WindowShopping extends JavaPlugin {
 
     /**
      * Returns this plugin object instance
+     *
      * @return this plugin object instance
      */
     public WindowShopping getPlugin() {

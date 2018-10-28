@@ -19,6 +19,7 @@ public class ShopItem {
 
     /**
      * Returns the material of this shop item
+     *
      * @return material of this shop item
      */
     public Material getMaterial() {
@@ -27,6 +28,7 @@ public class ShopItem {
 
     /**
      * Gets the amount remaining of this shop item
+     *
      * @return
      */
     public int getAmount() {
@@ -35,6 +37,7 @@ public class ShopItem {
 
     /**
      * Sets the amount of this shop item
+     *
      * @param amount amount of this shop item
      */
     public void setAmount(int amount) {
