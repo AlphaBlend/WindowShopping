@@ -51,6 +51,14 @@ public class WindowShopping extends JavaPlugin {
     }
 
     /**
+     * Gets the economy object
+     * @return the economy object
+     */
+    public Economy getEconomy() {
+        return economy;
+    }
+
+    /**
      * Returns this plugin object instance
      *
      * @return this plugin object instance
