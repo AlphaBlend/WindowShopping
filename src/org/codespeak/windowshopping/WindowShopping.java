@@ -2,6 +2,7 @@ package org.codespeak.windowshopping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
@@ -17,6 +18,7 @@ import org.codespeak.windowshopping.listeners.BukkitInventoryListener;
 public class WindowShopping extends JavaPlugin {
 
     private List<Listener> listeners;
+    private Logger logger;
     private Economy economy;
 
     @Override
@@ -25,6 +27,7 @@ public class WindowShopping extends JavaPlugin {
         listeners.add(new BukkitInventoryListener(this));
 
         PluginManager manager = super.getServer().getPluginManager();
+        logger = super.getLogger();
 
         for (Listener listener : listeners) {
             manager.registerEvents(listener, this);
