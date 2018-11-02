@@ -1,6 +1,7 @@
 package org.codespeak.windowshopping.window;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -57,14 +58,26 @@ public class WindowBuilder {
     }
 
     /**
-     * Adds a new item to the list of items
-     * @param stack
-     * @param type
+     * Adds a new window item to this window
+     *
+     * @param windowItem the window item to add
      */
-    public void addItem(ItemStack stack, ButtonType type) {
-        items.add(new WindowItem(stack, type));
+    public void addItem(WindowItem windowItem) {
+        List<WindowItem> windowItems = Arrays.asList(windowItem);
+        addItems(windowItems);
     }
 
+    /**
+     * Adds a list of window items to this window
+     *
+     * @param windowItems list of window items to add
+     */
+    public void addItems(List<WindowItem> windowItems) {
+        for (WindowItem windowItem : windowItems) {
+            items.add(windowItem);
+        }
+    }
+    
     /**
      * This makes sure that the size of the items in this list is divisible
      * by the size of the number of items in a row of a chest window. If this
