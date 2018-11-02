@@ -10,11 +10,9 @@ public enum WindowType {
     MAIN_MENU(0, "Main Menu", null),
     PLAYER_SHOP_OVERVIEW(1, "Player Shop Overview", MAIN_MENU),
     INDIVIDUAL_PLAYER_SHOP(2, "%p's Shop", PLAYER_SHOP_OVERVIEW),
-    PLAYER_SHOP_MANAGER(3, "Player Shop Manager", PLAYER_SHOP_OVERVIEW),
+    PLAYER_SHOP_MANAGER(3, "Player Shop Manager", MAIN_MENU),
     ITEM_MANAGEMENT(4, "Item Management", PLAYER_SHOP_MANAGER),
-    CHANGE_ITEM_PRICES(5, "Change Item Prices", ITEM_MANAGEMENT),
-    CHANGE_ITEM_PRICE(6, "Change Item Price", CHANGE_ITEM_PRICES),
-    NAME_SHOP_WINDOW9(7, "Name Shop", PLAYER_SHOP_MANAGER);
+    CHANGE_ITEM_PRICES(5, "Change Item Prices", ITEM_MANAGEMENT);
 
     private final int id;
     private final String name;

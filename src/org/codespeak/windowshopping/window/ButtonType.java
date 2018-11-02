@@ -20,6 +20,7 @@ public enum ButtonType {
     PLAYER_SHOP_ITEM(null),
     WINDOW_ITEM(null),
     INFO_ITEM(null),
+    CHANGE_PRICE_ITEM(null),
     NONE(null);
 
     private final Material mat;
