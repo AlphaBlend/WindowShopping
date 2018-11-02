@@ -10,6 +10,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.codespeak.windowshopping.listeners.BukkitInventoryListener;
+import org.codespeak.windowshopping.listeners.BukkitPlayerListener;
 
 /**
  *
@@ -26,6 +27,7 @@ public class WindowShopping extends JavaPlugin {
     public void onEnable() {
         listeners = new ArrayList<Listener>();
         listeners.add(new BukkitInventoryListener(this));
+        listeners.add(new BukkitPlayerListener(this));
 
         PluginManager manager = super.getServer().getPluginManager();
         logger = super.getLogger();
