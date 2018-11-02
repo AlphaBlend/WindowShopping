@@ -39,6 +39,24 @@ public class WindowBuilder {
     }
 
     /**
+     * Adds a blank item to the window
+     */
+    public void addBlankItem() {
+        addBlankItem(1);
+    }
+
+    /**
+     * Adds a blank item to the window a specified number of times
+     * @param times number of blank items
+     */
+    public void addBlankItem(int times) {
+        for (int i = 0; i < times; i++) {
+            ItemStack airStack = new ItemStack(Material.AIR, 1);
+            items.add(new WindowItem(airStack, ButtonType.NONE));
+        }
+    }
+
+    /**
      * Adds a new item to the list of items
      * @param stack
      * @param type
