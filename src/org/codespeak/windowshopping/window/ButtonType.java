@@ -1,6 +1,10 @@
 package org.codespeak.windowshopping.window;
 
+import java.util.Collections;
+import java.util.List;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 /**
  * An enum listing several types of buttons for windows
@@ -9,33 +13,67 @@ import org.bukkit.Material;
  */
 public enum ButtonType {
 
-    PREVIOUS_PAGE(Material.CHEST),
-    NEXT_PAGE(Material.CHEST),
-    PREVIOUS_MENU(Material.ENDER_CHEST),
-    ITEM_AMOUNT_MODIFIER(Material.DISPENSER),
-    ITEM_AMOUNT_MODIFIER_16(Material.DISPENSER),
-    ITEM_AMOUNT_MODIFIER_32(Material.DISPENSER),
-    ITEM_AMOUNT_MODIFIER_64(Material.DISPENSER),
-    MESSAGE_ITEM(Material.PAPER),
-    PLAYER_SHOP_ITEM(null),
-    WINDOW_ITEM(null),
-    INFO_ITEM(null),
-    CHANGE_PRICE_ITEM(null),
-    NONE(null);
+    PREVIOUS_PAGE,
+    NEXT_PAGE,
+    PREVIOUS_MENU,
+    ITEM_AMOUNT_MODIFIER,
+    ITEM_AMOUNT_MODIFIER_16,
+    ITEM_AMOUNT_MODIFIER_32,
+    ITEM_AMOUNT_MODIFIER_64,
+    MESSAGE_ITEM,
+    PLAYER_SHOP_ITEM,
+    WINDOW_ITEM,
+    INFO_ITEM,
+    CHANGE_PRICE_ITEM,
+    NONE;
 
-    private final Material mat;
-
-    private ButtonType(Material mat) {
-        this.mat = mat;
+    /**
+     * Builds a window item given its button type and material
+     *
+     * @param type type of button
+     * @param material material of the window item
+     * @return a window item of the specified type and material
+     */
+    public static WindowItem buildWindowItem(ButtonType type, Material material) {
+        return buildWindowItem(type, material, "");
     }
 
     /**
-     * Gets the material associated with this button
+     * Builds a window item given its button type, material and display name
      *
-     * @return
+     * @param type type of button
+     * @param material material of the window item
+     * @param displayName display name of the window item
+     * @return a window item of the specified type, material and display name
      */
-    public Material getMaterial() {
-        return mat;
+    public static WindowItem buildWindowItem(ButtonType type, Material material, String displayName) {
+        return buildWindowItem(type, material, displayName, Collections.EMPTY_LIST);
+    }
+
+    /**
+     * Builds a window item given its buttontype, material, display
+     * name and lore
+     *
+     * @param type the type of button
+     * @param material
+     * @param displayName
+     * @param lore
+     * @return a window item of the specified type, material, display
+     * name and lore
+     */
+    public static WindowItem buildWindowItem(ButtonType type, Material material, String displayName, List<String> lore) {
+        ItemStack stack = new ItemStack(material, 1);
+        ItemMeta meta = stack.getItemMeta();
+
+        if (!displayName.isEmpty()) {
+            meta.setDisplayName(displayName);
+        }
+
+        if (!lore.isEmpty()) {
+            meta.setLore(lore);
+        }
+
+        return new WindowItem(stack, type);
     }
 
 }
