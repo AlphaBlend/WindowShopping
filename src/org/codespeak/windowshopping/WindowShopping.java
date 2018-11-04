@@ -18,10 +18,15 @@ import org.codespeak.windowshopping.listeners.BukkitPlayerListener;
  */
 public class WindowShopping extends JavaPlugin {
 
+    private static WindowShopping instance;
     private List<Listener> listeners;
     private Logger logger;
     private Economy economy;
     private boolean shopEnabled;
+
+    public WindowShopping() {
+        instance = this;
+    }
 
     @Override
     public void onEnable() {
@@ -66,7 +71,7 @@ public class WindowShopping extends JavaPlugin {
      * @return this plugin object instance
      */
     public static WindowShopping getPlugin() {
-        return this;
+        return instance;
     }
 
     /**
